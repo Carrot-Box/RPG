@@ -7,20 +7,37 @@ using System.Threading.Tasks;
 class Player
 {
     int AT = 100;
-    public int HP = 500;
-    public int MAXHP = 1000;
-    public int MP = 50;
-    public int MAXMP = 500;
+    int HP = 500;
+    int MP = 50;
+    int MAXHP = 1000;
+    int MAXMP = 500;
 
+    public void PrintHp()
+    {
+        Console.Write("현재 당신의 HP는 " + HP);
+        Console.WriteLine("입니다.");
+    }
+    public void MaxHp()
+    {
+        if (HP < MAXHP)
+        {
+            HP = MAXHP;
+            PrintHp();
+        }
+        else
+        {
+            Console.WriteLine("체력이 가득찼습니다.");
+        }
+    }
     public void PlayerSetting()
     {
-        Console.WriteLine("-------------------");
+        Console.WriteLine("---------UserStatus---------");
         Console.WriteLine("AT : " + AT);
         Console.Write("HP : " + HP);
         Console.WriteLine("/" + MAXHP);
         Console.Write("MP : " + MP);
         Console.WriteLine("/" + MAXMP);
-        Console.WriteLine("-------------------");
+        Console.WriteLine("----------------------------");
     }
 }
 enum STARTSELECT
@@ -38,7 +55,8 @@ namespace xxx
             Console.Clear();
             Console.WriteLine("이세계에 오신걸 환영합니다. \n어디로 가시겠습니까?");
             Console.WriteLine("1. 마을");
-            Console.WriteLine("2. 배틀");
+            Console.WriteLine("2. 전장");
+            Console.WriteLine("----------------------------");
 
             ConsoleKeyInfo CKI = Console.ReadKey();
             switch (CKI.Key)
@@ -65,25 +83,18 @@ namespace xxx
                 _Player.PlayerSetting();
                 Console.WriteLine("마을에 입장하신걸 환영합니다. \n무엇을 고르겠습니까");
                 Console.WriteLine("1. 체력회복");
-                Console.WriteLine("2. 명상");
+                Console.WriteLine("2. 머하지..?");
                 Console.WriteLine("3. 나가기");
+                Console.WriteLine("----------------------------");
                 
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.D1:
-                        //Q. 캡슐화를 안쓰고 플레이어의 hp를 채운다 한다면... 어떻게 해야할까?
-                        if (_Player.HP < _Player.MAXHP)
-                        {
-                            _Player.HP = _Player.MAXHP;
-                        }
-                        else
-                        {
-                            Console.WriteLine("풀피입니다.");
-                        }
+                        _Player.MaxHp();
                         Console.ReadKey();
                         break;
                     case ConsoleKey.D2:
-                        // 명상타임(딜레이함수)
+                        // 미정
                         break;
                     case ConsoleKey.D3:
                         return;
@@ -100,6 +111,7 @@ namespace xxx
                 Console.WriteLine("1. 싸운다");
                 Console.WriteLine("2. 자폭한다");
                 Console.WriteLine("3. 도망간다");
+                Console.WriteLine("----------------------------");
 
                 switch (Console.ReadKey().Key)
                 {
