@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 class Player
 {
-    int AT = 100;
-    int HP = 500;
-    int MP = 50;
-    int MAXHP = 1000;
-    int MAXMP = 500;
+    public int AT = 500;
+    public int HP = 500;
+    public int MAXHP = 1000;
 
     public void PrintHp()
     {
@@ -29,14 +28,28 @@ class Player
             Console.WriteLine("체력이 가득찼습니다.");
         }
     }
-    public void PlayerSetting()
+    public void PlayerStatusRender()
     {
         Console.WriteLine("---------UserStatus---------");
         Console.WriteLine("AT : " + AT);
         Console.Write("HP : " + HP);
         Console.WriteLine("/" + MAXHP);
-        Console.Write("MP : " + MP);
-        Console.WriteLine("/" + MAXMP);
+        Console.WriteLine("----------------------------");
+    }
+}
+class Monster
+{
+    public int AT = 100;
+    public int HP = 1000;
+    public int MAXHP = 1000;
+
+
+    public void MonStatusRender()
+    {
+        Console.WriteLine("----------------------------");
+        Console.WriteLine("AT : " + AT);
+        Console.Write("HP : " + HP);
+        Console.WriteLine("/" + MAXHP);
         Console.WriteLine("----------------------------");
     }
 }
@@ -80,13 +93,13 @@ namespace xxx
             while (true)
             {
                 Console.Clear();
-                _Player.PlayerSetting();
+                _Player.PlayerStatusRender();
                 Console.WriteLine("마을에 입장하신걸 환영합니다. \n무엇을 고르겠습니까");
                 Console.WriteLine("1. 체력회복");
                 Console.WriteLine("2. 머하지..?");
                 Console.WriteLine("3. 나가기");
                 Console.WriteLine("----------------------------");
-                
+
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.D1:
@@ -103,23 +116,47 @@ namespace xxx
         }
         static void Battle(Player _Player)
         {
+            Monster NewMonster = new Monster();
+
             while (true)
             {
                 Console.Clear();
-                _Player.PlayerSetting();
-                Console.WriteLine("적이 나타났다!!! \n무엇을 고르겠습니까");
+                _Player.PlayerStatusRender();
+                NewMonster.MonStatusRender();
+                Console.WriteLine("몬스터가 출현했다!!! \n무엇을 고르겠습니까");
                 Console.WriteLine("1. 싸운다");
                 Console.WriteLine("2. 자폭한다");
                 Console.WriteLine("3. 도망간다");
                 Console.WriteLine("----------------------------");
+                //Console.ReadKey();
 
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.D1:
+                        _Player.HP -= NewMonster.AT;
+                        NewMonster.HP -= _Player.AT;
+                        Console.ReadKey();
+                        if (NewMonster.HP == 0)
+                        {
+                            //NewMonster.MonStatusRender();
+                            Console.WriteLine("승리하였습니다.\n마을로 돌아가겠습니다.");
+                            Console.ReadKey();
+                            Town(_Player);
+
+                        }
+                        else if (_Player.HP == 0)
+                        {
+                            Console.WriteLine("패배하였습니다\n마을로 돌아가겠습니다.");
+                            Town(_Player);
+                        }
                         break;
                     case ConsoleKey.D2:
-                        break;
-                    case ConsoleKey.D3: 
+                        Console.WriteLine("펑!");
+                        Console.ReadKey();
+                        return;
+                    case ConsoleKey.D3:
+                        Console.WriteLine("니게룽다요~");
+                        Console.ReadKey();
                         return;
                 }
             }
@@ -145,3 +182,5 @@ namespace xxx
         }
     }
 }
+
+// 2.16 몬스터 클래스 + 니게룽다요
