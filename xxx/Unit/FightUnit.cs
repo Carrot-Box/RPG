@@ -7,36 +7,35 @@ using System.Threading.Tasks;
 public class FightUnit
 {
     protected string Name = "None";
-    protected int ATT = 200;
+    protected int ATT = 2000;
     protected int DEF = 100;
     protected int HP = 500;
     protected int MAXHP = 1000;
+
+    public int GetAtt { get => ATT; }
 
     public bool IsDeath()
     {
         return HP <= 0;
     }
-    public void Damage(FightUnit _OtherUnit)
+    //public void Damage(FightUnit _OtherUnit)
+    //{
+    //    Console.WriteLine(Name + "가" + _OtherUnit.ATT + "의 데미지를 입었습니다");
+    //    Console.ReadKey();
+    //    HP -= _OtherUnit.ATT;
+    //}
+    public void Damage(int ATTDMG)
     {
-        Console.WriteLine(Name + "가" + _OtherUnit.ATT + "의 데미지를 입었습니다");
+        Console.WriteLine(Name + "가" + ATTDMG + "의 데미지를 입었습니다");
         Console.ReadKey();
-        HP -= _OtherUnit.ATT;
+        HP -= ATTDMG;
     }
     public void StatusRender()
     {
         Console.WriteLine(Name + "------------------------");
-        Console.WriteLine("AT : " + ATT + "      DEF : " + DEF);
+        Console.WriteLine("AT : " + GetAtt + "      DEF : " + DEF);
         Console.WriteLine("HP : " + HP + "/" + MAXHP);
         Console.WriteLine("------------------------------");
-    }
-    public void LvUp()
-    {
-        ATT = (int)(ATT * 120 / 100);
-        DEF = (int)(DEF * 120 / 100);
-        HP = (int)(HP * 120 / 100);
-        MAXHP = (int)(MAXHP * 120 / 100);
-        StatusRender();
-        Console.WriteLine("플레이어가 레벨업 하였습니다.");
     }
     public void AttMechanism()
     {

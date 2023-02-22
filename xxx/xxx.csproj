@@ -43,17 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Random_CC.cs" />
+    <Compile Include="BattleZone\Floor.cs" />
+    <Compile Include="BattleZone\First Floor.cs" />
+    <Compile Include="BattleZone\Second Floor.cs" />
+    <Compile Include="BattleZone\Third Floor.cs" />
     <Compile Include="Menu.cs" />
-    <Compile Include="Stage.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Monster.cs" />
-    <Compile Include="FightUnit.cs" />
+    <Compile Include="Unit\Player.cs" />
+    <Compile Include="Unit\Monster.cs" />
+    <Compile Include="Unit\FightUnit.cs" />
     <Compile Include="RPG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

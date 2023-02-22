@@ -23,7 +23,7 @@ namespace TEXTRPG
                     Console.ReadKey();
                     return STARTSELECT.SELECTTOWN;
                 case ConsoleKey.D2:
-                    Console.WriteLine("전장으로 떠나겠습니다.");
+                    Console.WriteLine("타워로 떠나겠습니다.");
                     Console.ReadKey();
                     return STARTSELECT.SELECTBATTLE;
                 default:
@@ -55,66 +55,6 @@ namespace TEXTRPG
                         return STARTSELECT.NONESELECT;
                 }
             }
-        }
-        public static STARTSELECT Battle(Player _Player)
-        {
-            Monster NewMonster = new Monster("기사");
-            while (!NewMonster.IsDeath() && !_Player.IsDeath())
-            {
-                Console.Clear();
-                _Player.StatusRender();
-                NewMonster.StatusRender();
-                Console.ReadKey();
-                Console.WriteLine("덤벼라!");
-                switch (Console.ReadKey().Key)
-                {
-                    case ConsoleKey.D1:
-                        Console.WriteLine("");
-                        Console.ReadKey();
-                        NewMonster.Damage(_Player);
-                        if (!NewMonster.IsDeath())
-                        {
-                            _Player.Damage(NewMonster);
-                            break;
-                        }
-                        // 몬스터가 죽었을 경우
-                        NewMonster.IsDeath();
-                        Console.WriteLine("몬스터 체력이 0이 되었습니다.");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Console.WriteLine("전투에서 승리하였습니다");
-                        _Player.LvUp();
-                        Console.WriteLine("어디로 가시겠습니까?");
-                        Console.WriteLine("1. 마을로 돌아가기\n2. 다음 스테이지로 넘어가지");
-                        Console.WriteLine("------------------------------");
-                        switch (Console.ReadKey().Key)
-                        {
-                            case ConsoleKey.D1:
-                                Console.WriteLine("마을로 돌아가겠습니다.");
-                                Console.ReadKey();
-                                return STARTSELECT.SELECTTOWN;
-                            case ConsoleKey.D2:
-                                Console.WriteLine("다음 스테이지가 없습니다. 마을로 돌아가겠습니다.");
-                                Console.ReadKey();
-                                return STARTSELECT.BATTLE2;
-                        }
-                        break;
-                }
-            }
-            return STARTSELECT.SELECTTOWN;
-        }
-        public static STARTSELECT Battle2(Player _Player)
-        {
-            Monster NewMonster2 = new Monster("하이오크");
-            while (true)
-            {
-                Console.Clear();
-                Console.WriteLine("2번째 가나다라");
-                Console.WriteLine("마바사아자차카");
-                Console.ReadKey();
-                break;
-            }
-            return STARTSELECT.SELECTTOWN;
         }
     }
 }
