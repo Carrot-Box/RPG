@@ -24,6 +24,8 @@ public enum STARTSELECT
     SELECTBATTLE,
     BATTLE2,
     BATTLE3,
+    BATTLE4,
+    BATTLE5,
     NONESELECT
 }
 namespace TEXTRPG
@@ -49,13 +51,19 @@ namespace TEXTRPG
                         SelectCheck = Menu.Town(NewPlayer);
                         break;
                     case STARTSELECT.SELECTBATTLE:
-                        SelectCheck = FirstFloor.Battle(NewPlayer);
+                        SelectCheck = First_Floor.Battle(NewPlayer);
                         break;
                     case STARTSELECT.BATTLE2:
-                        SelectCheck = SecondFloor.Battle2(NewPlayer);
+                        SelectCheck = Second_Floor.Battle2(NewPlayer);
                         break;
                     case STARTSELECT.BATTLE3:
-                        SelectCheck = ThirdFloor.Battle3(NewPlayer);
+                        SelectCheck = Third_Floor.Battle3(NewPlayer);
+                        break;
+                    case STARTSELECT.BATTLE4:
+                        SelectCheck = Fourth_Floor.Battle4(NewPlayer);
+                        break;
+                    case STARTSELECT.BATTLE5:
+                        SelectCheck = Last_Floor.Battle5(NewPlayer);
                         break;
                 }
             }

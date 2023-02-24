@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Random_CC.cs" />
-    <Compile Include="BattleZone\Floor.cs" />
     <Compile Include="BattleZone\First Floor.cs" />
+    <Compile Include="BattleZone\Last Floor.cs" />
     <Compile Include="BattleZone\Second Floor.cs" />
     <Compile Include="BattleZone\Third Floor.cs" />
+    <Compile Include="BattleZone\Fourth Floor.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Unit\Player.cs" />
     <Compile Include="Unit\Monster.cs" />

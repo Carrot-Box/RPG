@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 public class FightUnit
 {
     protected string Name = "None";
-    protected int ATT = 2000;
+    protected int ATT = 300;
     protected int DEF = 100;
     protected int HP = 500;
     protected int MAXHP = 1000;

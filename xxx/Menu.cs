@@ -24,8 +24,35 @@ namespace TEXTRPG
                     return STARTSELECT.SELECTTOWN;
                 case ConsoleKey.D2:
                     Console.WriteLine("타워로 떠나겠습니다.");
+                    Console.WriteLine("A : 1F | B : 2F | C : 3F | D : 4F | E : 5F");
                     Console.ReadKey();
-                    return STARTSELECT.SELECTBATTLE;
+                    // 배틀필드 선택지 만들기
+                    switch (Console.ReadKey().Key)
+                    {
+                        case ConsoleKey.A:
+                            Console.WriteLine("1F");
+                            return STARTSELECT.SELECTBATTLE;
+                        case ConsoleKey.B:
+                            Console.WriteLine("2F");
+                            return STARTSELECT.BATTLE2;
+                        case ConsoleKey.C:
+                            Console.WriteLine("3F");
+                            Console.ReadKey();
+                            return STARTSELECT.BATTLE3;
+                        case ConsoleKey.D:
+                            Console.WriteLine("4F");
+                            Console.ReadKey ();
+                            return STARTSELECT.BATTLE4;
+                        case ConsoleKey.E:
+                            Console.WriteLine("5F");
+                            Console.ReadKey();
+                            return STARTSELECT.BATTLE5;
+                        default:
+                            Console.WriteLine("잘못된 선택입니다");
+                            Console.ReadKey();
+                            break;
+                    }
+                    return STARTSELECT.NONESELECT;
                 default:
                     Console.WriteLine("잘못 입력하였습니다.");
                     Console.ReadKey();

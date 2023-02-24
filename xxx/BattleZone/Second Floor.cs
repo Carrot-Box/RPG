@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 // 플레이어 스킬? or 무기같은거 획득
 namespace TEXTRPG
 {
-    internal class SecondFloor
+    internal class Second_Floor
     {
         public static STARTSELECT Battle2(Player _Player)
         {
@@ -17,8 +17,8 @@ namespace TEXTRPG
                 Console.Clear();
                 _Player.StatusRender();
                 NewMonster2.StatusRender();
-                Console.WriteLine("2층에 진입하셨습니다.\n정예몬스터가 나옵니다.");
-                Console.WriteLine("1. 싸운다/2. 귀환한다.");
+                Console.WriteLine("2층에 진입하셨습니다.\n정예등급 몬스터가 나옵니다.");
+                Console.WriteLine("1. 싸운다\n2. 도망간다");
                 Console.ReadKey();
                 switch (Console.ReadKey().Key)
                 {
@@ -29,11 +29,11 @@ namespace TEXTRPG
                         {
                             // if에서 확률에 속하면 크리티컬 아니면 이 매소드
                             _Player.Damage(NewMonster2.GetAtt);
-                            if (NewMonster2.AttRandom()  30)
-                            {
-                                _Player.Damage(NewMonster2.Critical());
-                            }
-                            break;
+                            //if (NewMonster2.AttRandom())
+                            //{
+                            //    _Player.Damage(NewMonster2.Critical());
+                            //}
+                            //break;
                         }
                         NewMonster2.IsDeath();
                         Console.WriteLine("적을 처치하였습니다.\n몬스터의 체력이 0이 되었습니다.");
@@ -52,6 +52,14 @@ namespace TEXTRPG
                                 Console.ReadKey();
                                 return STARTSELECT.BATTLE3;
                         }
+                        break;
+                    case ConsoleKey.D2:
+                        Console.WriteLine("호다다닥");
+                        Console.ReadKey();
+                        return STARTSELECT.SELECTTOWN;
+                    default:
+                        Console.WriteLine("잘못된 선택입니다.");
+                        Console.ReadKey();
                         break;
                 }
             }

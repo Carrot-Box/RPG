@@ -6,3 +6,11 @@ C:\Users\user\Desktop\xxx\xxx\xxx\obj\Debug\xxx.csproj.SuggestedBindingRedirects
 C:\Users\user\Desktop\xxx\xxx\xxx\obj\Debug\xxx.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\xxx\xxx\xxx\obj\Debug\xxx.exe
 C:\Users\user\Desktop\xxx\xxx\xxx\obj\Debug\xxx.pdb
+E:\xxx\xxx\xxx\bin\Debug\xxx.exe.config
+E:\xxx\xxx\xxx\bin\Debug\xxx.exe
+E:\xxx\xxx\xxx\bin\Debug\xxx.pdb
+E:\xxx\xxx\xxx\obj\Debug\xxx.csproj.AssemblyReference.cache
+E:\xxx\xxx\xxx\obj\Debug\xxx.csproj.SuggestedBindingRedirects.cache
+E:\xxx\xxx\xxx\obj\Debug\xxx.csproj.CoreCompileInputs.cache
+E:\xxx\xxx\xxx\obj\Debug\xxx.exe
+E:\xxx\xxx\xxx\obj\Debug\xxx.pdb
