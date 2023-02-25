@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// 플레이어 스킬? or 무기같은거 획득
+
 namespace TEXTRPG
 {
     internal class Second_Floor
@@ -23,24 +23,25 @@ namespace TEXTRPG
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.D1:
-                        Console.WriteLine("의라챠차");
+                        Console.WriteLine("\n의라챠차\n");
                         NewMonster2.Damage(_Player.GetAtt);
                         if (!NewMonster2.IsDeath())
                         {
-                            // if에서 확률에 속하면 크리티컬 아니면 이 매소드
                             _Player.Damage(NewMonster2.GetAtt);
+                            // if에서 확률에 속하면 크리티컬 아니면 이 매소드
                             //if (NewMonster2.AttRandom())
                             //{
                             //    _Player.Damage(NewMonster2.Critical());
                             //}
-                            //break;
+                            break;
                         }
                         NewMonster2.IsDeath();
                         Console.WriteLine("적을 처치하였습니다.\n몬스터의 체력이 0이 되었습니다.");
                         Console.Clear();
                         _Player.LvUp();
-                        Console.WriteLine("레벨업하였습니다.\n어디로 가시겠습니까?");
+                        Console.WriteLine("\n어디로 가시겠습니까?\n");
                         Console.WriteLine("1. 마을로 돌아가기\n2. 3층으로 올라가기");
+                        Console.WriteLine("------------------------------");
                         switch (Console.ReadKey().Key)
                         {
                             case ConsoleKey.D1:

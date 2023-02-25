@@ -11,25 +11,22 @@ namespace TEXTRPG
         public static STARTSELECT Battle(Player _Player)
         {
             Monster NewMonster = new Monster();
-            NewMonster.SetUp(200, 100, 500, 800, "기사");
+            NewMonster.SetUp(200, 100, 800, 800, "기사");
             while (!NewMonster.IsDeath() && !_Player.IsDeath())
             {
                 Console.Clear();
                 Console.WriteLine("1층에 진입하셨습니다.\n 기사등급 몬스터가 나타났습니다.");
                 _Player.StatusRender();
                 NewMonster.StatusRender();
-                Console.WriteLine("1. 싸우기\n2. 도망가기");
-                Console.ReadKey();
+                Console.WriteLine("1. 싸우기\n2. 도망가기\n");
                 // D1 싸우기 D2 도망가기
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.D1:
-                        Console.WriteLine("덤벼랏");
+                        Console.WriteLine("덤벼랏\n");
                         switch (Console.ReadKey().Key)
                         {
                             case ConsoleKey.D1:
-                                Console.WriteLine("");
-                                Console.ReadKey();
                                 NewMonster.Damage(_Player.GetAtt);
                                 if (!NewMonster.IsDeath())
                                 {
@@ -56,7 +53,6 @@ namespace TEXTRPG
                                         Console.WriteLine("\n2층으로 입장하겠습니다.");
                                         Console.ReadKey();
                                         return STARTSELECT.BATTLE2;
-
                                 }
                                 break;
                         }

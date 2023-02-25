@@ -43,12 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BattleZone\First Floor.cs" />
-    <Compile Include="BattleZone\Last Floor.cs" />
-    <Compile Include="BattleZone\Second Floor.cs" />
-    <Compile Include="BattleZone\Third Floor.cs" />
-    <Compile Include="BattleZone\Fourth Floor.cs" />
+    <Compile Include="BattleZone\1First Floor.cs" />
+    <Compile Include="BattleZone\5Last Floor.cs" />
+    <Compile Include="BattleZone\2Second Floor.cs" />
+    <Compile Include="BattleZone\3Third Floor.cs" />
+    <Compile Include="BattleZone\4Fourth Floor.cs" />
+    <Compile Include="Unit\Player_Skill.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="BattleZone\Village.cs" />
     <Compile Include="Unit\Player.cs" />
     <Compile Include="Unit\Monster.cs" />
     <Compile Include="Unit\FightUnit.cs" />

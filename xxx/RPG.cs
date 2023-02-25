@@ -48,7 +48,7 @@ namespace TEXTRPG
                         SelectCheck = Menu.StartSelect();
                         break;
                     case STARTSELECT.SELECTTOWN:
-                        SelectCheck = Menu.Town(NewPlayer);
+                        SelectCheck = Village.Town(NewPlayer);
                         break;
                     case STARTSELECT.SELECTBATTLE:
                         SelectCheck = First_Floor.Battle(NewPlayer);
