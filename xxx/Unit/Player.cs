@@ -16,11 +16,11 @@ public class Player : FightUnit
     }
     public void MaxHeal()
     {
-        if (HP < MAXHP)
+        if (HP < GetMaxHp)
         {
             PrintHp();
-            HP = MAXHP;
-            DEF = MAXDEF;
+            HP = GetMaxHp;
+            DEF = GetMaxDef;
             return;
         }
         Console.WriteLine("현재 플레이어의 HP는" + HP + "입니다.");
@@ -29,10 +29,10 @@ public class Player : FightUnit
     }
     public void LvUp()
     {
-        ATT = (int)(GetAtt * 140 / 100);
-        MAXDEF = (int)(MAXDEF * 140 / 100);
-        HP = (int)(HP * 140 / 100);
-        MAXHP = (int)(MAXHP * 140 / 100);
+        ATT = (int)(ATT * 140 / 100);
+        ORIMAXDEF = (int)(ORIMAXDEF * 140 / 100);
+        ORIMAXHP = (int)(ORIMAXHP * 140 / 100);
+        MaxHeal();
         StatusRender();
         Console.WriteLine("플레이어가 레벨업 하였습니다.\n");
     }

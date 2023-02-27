@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 
+
 //시스템 추가 예정
 //나나나나ㅏ나중 최종 시스템
 //아군공격력 100 - 적군방어력 50 = +50
@@ -36,6 +37,7 @@ namespace TEXTRPG
         static void Main(string[] args)
         {
             Player NewPlayer = new Player("플레이어");
+            ItemDB itemDB = new ItemDB();
 
             STARTSELECT SelectCheck = STARTSELECT.NONESELECT;
 
