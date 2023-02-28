@@ -34,21 +34,19 @@ namespace TEXTRPG
                         Console.ReadKey();
                         Console.Clear();
                         _Player.LvUp();
-                        Console.WriteLine("어디로 가시겠습니가?.\n1. 마을로 돌아가기\n2. 마지막층으로 올라가기");
+                        Console.WriteLine("어디로 가시겠습니가?.\n\n1. 마지막층으로 올라가기\n2. 마을로 돌아가기");
                         switch (Console.ReadKey().Key)
                         {
                             case ConsoleKey.D1:
-                                return STARTSELECT.SELECTTOWN;
-                            case ConsoleKey.D2:
                                 return STARTSELECT.BATTLE5;
+                            case ConsoleKey.D2:
+                                return STARTSELECT.SELECTTOWN;
                         }
                         break;
                     case ConsoleKey.D2:
                         Console.WriteLine("장군 등급 몬스터 : 쫄?");
                         Console.ReadKey();
                         return STARTSELECT.SELECTTOWN;
-                    default:
-                        break;
                 }
             }
             Console.Clear();

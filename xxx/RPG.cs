@@ -27,6 +27,7 @@ public enum STARTSELECT
     BATTLE3,
     BATTLE4,
     BATTLE5,
+    LAST,
     NONESELECT
 }
 namespace TEXTRPG
@@ -66,6 +67,9 @@ namespace TEXTRPG
                         break;
                     case STARTSELECT.BATTLE5:
                         SelectCheck = Last_Floor.Battle5(NewPlayer);
+                        break;
+                    case STARTSELECT.LAST:
+                        SelectCheck = LastMent.lastMent();
                         break;
                 }
             }

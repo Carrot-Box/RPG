@@ -33,6 +33,7 @@ public class Player : FightUnit
         ORIMAXDEF = (int)(ORIMAXDEF * 140 / 100);
         ORIMAXHP = (int)(ORIMAXHP * 140 / 100);
         MaxHeal();
+        Console.Clear();
         StatusRender();
         Console.WriteLine("플레이어가 레벨업 하였습니다.\n");
     }

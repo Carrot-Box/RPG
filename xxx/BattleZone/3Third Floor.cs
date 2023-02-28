@@ -16,9 +16,9 @@ namespace TEXTRPG
             while (!NewMonster3.IsDeath() && !_Player.IsDeath())
             {
                 Console.Clear();
+                Console.WriteLine("3층에 도착하셨습니다\n장군등급 몬스터가 등장합니다.");
                 _Player.StatusRender();
                 NewMonster3.StatusRender();
-                Console.WriteLine("3층에 도착하셨습니다\n장군등급 몬스터가 등장합니다.");
                 Console.WriteLine("1. 싸우기\n2. 도망가기\n");
                 Console.ReadKey();
                 switch (Console.ReadKey().Key)
@@ -34,24 +34,17 @@ namespace TEXTRPG
                             break;
                         }
                         NewMonster3.IsDeath();
-                        Console.WriteLine("전투에서 승리하였습니다.\n몬스터 체력이 0이 되었습니다.");
+                        Console.WriteLine("\n몬스터 체력이 0이 되었습니다.\n플레이어의 승리입니다.");
                         Console.ReadKey();
                         Console.Clear();
                         _Player.LvUp();
-                        Console.WriteLine("어디로 가시겠습니까?\n\n1. 마을로 돌아가기\n2. 4층으로 올라가기");
+                        Console.WriteLine("어디로 가시겠습니까?\n\n1. 4층으로 올라가기\n2. 마을로 돌아가기");
                         switch (Console.ReadKey().Key)
                         {
                             case ConsoleKey.D1:
-                                Console.WriteLine("마을로 돌아가겠습니다.");
-                                Console.ReadKey();
-                                return STARTSELECT.SELECTTOWN;
-                            case ConsoleKey.D2:
-                                Console.WriteLine("4층으로 입장합니다.");
-                                Console.ReadKey();
                                 return STARTSELECT.BATTLE4;
-                            default:
-                                Console.WriteLine("잘못된 선택입니다.");
-                                break;
+                            case ConsoleKey.D2:
+                                return STARTSELECT.SELECTTOWN;
                         }
                         return STARTSELECT.SELECTTOWN;
                     case ConsoleKey.D2:

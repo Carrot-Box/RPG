@@ -33,33 +33,23 @@ namespace TEXTRPG
                         }
                         // 몬스터가 죽었을 경우
                         NewMonster.IsDeath();
-                        Console.WriteLine("몬스터 체력이 0이 되었습니다.\n전투에서 승리하였습니다");
+                        Console.WriteLine("\n몬스터 체력이 0이 되었습니다.\n플레이어의 승리입니다.");
                         Console.ReadKey();
                         Console.Clear();
                         _Player.LvUp();
-                        Console.WriteLine("어디로 가시겠습니까?\n1. 마을로 돌아가기\n2. 2층으로 올라가기");
+                        Console.WriteLine("어디로 가시겠습니까?\n\n1. 2층으로 올라가기\n2. 마을로 돌아가기");
                         switch (Console.ReadKey().Key)
                         {
                             case ConsoleKey.D1:
-                                Console.WriteLine("\n마을로 돌아가겠습니다.");
-                                Console.ReadKey();
-                                return STARTSELECT.SELECTTOWN;
-                            case ConsoleKey.D2:
-                                Console.WriteLine("\n2층으로 입장하겠습니다.");
-                                Console.ReadKey();
                                 return STARTSELECT.BATTLE2;
+                            case ConsoleKey.D2:
+                                return STARTSELECT.SELECTTOWN;
                         }
                         break;
-
                     case ConsoleKey.D2:
                         Console.WriteLine("니게룽다요~★");
                         Console.ReadKey();
                         return STARTSELECT.SELECTTOWN;
-                    default:
-                        Console.WriteLine("잘못된 선택입니다.");
-                        Console.ReadKey();
-                        break;
-
                 }
             }
             return STARTSELECT.SELECTTOWN;
