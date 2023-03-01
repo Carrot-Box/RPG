@@ -38,7 +38,7 @@ namespace TEXTRPG
         static void Main(string[] args)
         {
             Player NewPlayer = new Player("플레이어");
-            ItemDB itemDB = new ItemDB();
+            //ItemDB itemDB = new ItemDB();
 
             STARTSELECT SelectCheck = STARTSELECT.NONESELECT;
 

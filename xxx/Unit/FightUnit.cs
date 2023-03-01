@@ -17,14 +17,14 @@ public class FightUnit
     protected int MAXHP = 1000;     // 최대 체력(장비O)
 
     // 장비
-    protected Item WEAPON = new Item(ItemType.WEAPON);
-    protected Item CHEAT = new Item(ItemType.CHEST);
-    protected Item RING = new Item(ItemType.RING);
+    //protected Item WEAPON = new Item(ItemType.WEAPON);
+    //protected Item CHEAT = new Item(ItemType.CHEST);
+    //protected Item RING = new Item(ItemType.RING);
 
     public int GetAtt {
         get
         {
-            return ATT + WEAPON.ATT + CHEAT.ATT + RING.ATT;
+            return ATT;// + WEAPON.ATT + CHEAT.ATT + RING.ATT;
         }
     }
 
@@ -32,7 +32,7 @@ public class FightUnit
     {
         get
         {
-            return ORIMAXHP + WEAPON.HP + CHEAT.HP + RING.HP;
+            return ORIMAXHP; // + WEAPON.HP + CHEAT.HP + RING.HP;
         }
     }
 
@@ -40,7 +40,7 @@ public class FightUnit
     {
         get
         {
-            return ORIMAXDEF + WEAPON.DEF + CHEAT.DEF + RING.DEF;
+            return ORIMAXDEF;// + WEAPON.DEF + CHEAT.DEF + RING.DEF;
         }
     }
 

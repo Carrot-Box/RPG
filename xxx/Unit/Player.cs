@@ -5,6 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 public class Player : FightUnit
 {
+    private Inven PlayerInven = new Inven(5, 3);
+    public Inven Plven
+    {
+        get 
+        { 
+            return PlayerInven; 
+        }
+    }
+
+    
     public Player(string _Name)
     {
         Name = _Name;

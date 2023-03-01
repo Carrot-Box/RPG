@@ -48,17 +48,19 @@
     <Compile Include="BattleZone\2Second Floor.cs" />
     <Compile Include="BattleZone\3Third Floor.cs" />
     <Compile Include="BattleZone\4Fourth Floor.cs" />
-    <Compile Include="nextPass.cs" />
     <Compile Include="BattleZone\LastMent.cs" />
+    <Compile Include="Constructor.cs" />
+    <Compile Include="Inven.cs" />
     <Compile Include="Inven\Inven.cs" />
     <Compile Include="Inven\Item.cs" />
     <Compile Include="Inven\ItemDB.cs" />
-    <Compile Include="Menu.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Main\Menu.cs" />
     <Compile Include="BattleZone\Village.cs" />
     <Compile Include="Unit\Player.cs" />
     <Compile Include="Unit\Monster.cs" />
     <Compile Include="Unit\FightUnit.cs" />
-    <Compile Include="RPG.cs" />
+    <Compile Include="Main\RPG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

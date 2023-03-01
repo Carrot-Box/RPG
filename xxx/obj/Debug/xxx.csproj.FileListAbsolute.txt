@@ -14,3 +14,11 @@ E:\xxx\xxx\xxx\obj\Debug\xxx.csproj.SuggestedBindingRedirects.cache
 E:\xxx\xxx\xxx\obj\Debug\xxx.csproj.CoreCompileInputs.cache
 E:\xxx\xxx\xxx\obj\Debug\xxx.exe
 E:\xxx\xxx\xxx\obj\Debug\xxx.pdb
+C:\Users\rjh79\OneDrive\바탕 화면\xx\RPG\xxx\obj\Debug\xxx.csproj.AssemblyReference.cache
+C:\Users\rjh79\OneDrive\바탕 화면\xx\RPG\xxx\obj\Debug\xxx.csproj.SuggestedBindingRedirects.cache
+C:\Users\rjh79\OneDrive\바탕 화면\xx\RPG\xxx\obj\Debug\xxx.csproj.CoreCompileInputs.cache
+C:\Users\rjh79\OneDrive\바탕 화면\xx\RPG\xxx\obj\Debug\xxx.exe
+C:\Users\rjh79\OneDrive\바탕 화면\xx\RPG\xxx\obj\Debug\xxx.pdb
+C:\Users\rjh79\OneDrive\바탕 화면\xx\RPG\xxx\bin\Debug\xxx.exe.config
+C:\Users\rjh79\OneDrive\바탕 화면\xx\RPG\xxx\bin\Debug\xxx.exe
+C:\Users\rjh79\OneDrive\바탕 화면\xx\RPG\xxx\bin\Debug\xxx.pdb
